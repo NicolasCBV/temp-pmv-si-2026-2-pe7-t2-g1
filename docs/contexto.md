@@ -99,6 +99,53 @@ Por fim, **GOURISARIA M. et al. (2021)** estudaram dois datasets relacionados a 
 
 Um resumo dos estudos está descrito na Tabela 1.
 
+Tabela 1: Resumo dos estudos sobre Data Science aplicado a Diabetes.
+<table>
+<tr>
+<th>Autores</th>
+<th>Objetivo do estudo</th>
+<th>Métodos de Data Science</th>
+<th colspan="2">Linhas e colunas do dataset</th>
+</tr>
+<tr>
+<td>DANIEL et al. (2024)</td>
+<td>Previsão de diabetes tipo 1 e tempo até o diagnóstico.</td>
+<td>SuperLearner; 34 algoritmos; Univariate Correlation Screening; Random Forest Screening; AUROC; regressão logística.</td>
+<td>34.089.103</td>
+<td>26</td>
+</tr>
+<tr>
+<td>MAO T. (2026)</td>
+<td>Predição/estratificação de risco de diabetes.</td>
+<td>MLP; limpeza de dados; padronização Z-score; PCA; codificação de variáveis; métricas de classificação.</td>
+<td>5.000</td>
+<td>10 (9 atributos + alvo)</td>
+</tr>
+<tr>
+<td>EDLITZ Y. e SEGAL E. (2022)</td>
+<td>Previsão de risco de diabetes tipo 2.</td>
+<td>Gradient Boosting Trees; análise de sobrevivência; regressão logística; scorecards.</td>
+<td>44.709</td>
+<td>798</td>
+</tr>
+<tr>
+<td>ABUSHAHLA K e PALA M. (2024)</td>
+<td>Avaliação de modelos para classificação de diabetes em base desbalanceada.</td>
+<td>Regressão Logística, Árvores de Decisão, Random Forest, Gradient Boosting, SVM, KNN, Naive Bayes, XGBoost, LightGBM, CatBoost; SMOTE</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>GOURISARIA M. et al. (2021)</td>
+<td>Diabetes mellitus (não diferencia tipo 1 e tipo 2).</td>
+<td>SVM, Naive Bayes, Random Forest, KNN; redução de dimensionalidade com LDA e PCA.</td>
+<td colspan="2">Dois datasets: Frankfurt Hospital com 2.000 registros e 9 atributos; UCI com aproximadamente 520 registros e 17 atributos (16 características + classe).</td>
+</tr>
+</table>
+
+*Tabela 1: Resumo dos estudos sobre Data Science aplicado a Diabetes.*
+
+
 # Descrição do _dataset_ selecionado
 
 Nesta seção, apresente uma visão clara e objetiva do dataset selecionado, incluindo:
