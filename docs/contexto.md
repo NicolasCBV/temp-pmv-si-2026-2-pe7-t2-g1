@@ -83,39 +83,21 @@ O objetivo aqui não é definir clientes específicos ou papéis exatos dentro d
 
 ## Estado da arte
 
-Nesta seção, descreva abordagens da literatura que tratam problemas semelhantes ao seu. Seu objetivo é documentar métodos, dados, métricas e resultados.
+A diabetes é um distúrbio metabólico caracterizado por níveis elevados de glicose no sangue, tornou-se uma preocupação significativa de saúde pública em todo o mundo. Ele está associado a várias complicações, incluindo doenças cardiovasculares, doenças renais e neuropatia. A detecção precoce e a avaliação precisa do risco de diabetes desempenham um papel fundamental na prevenção ou no retardamento de seu início, bem como no manejo eficaz da doença (BALAJI, K et al., 2023). Os métodos tradicionais de avaliação de risco baseiam-se em fatores como idade, peso, estilo de vida ativo ou sedentário, o uso de cigarro, ingestão de bebidas alcoólicas e outros inúmeros fatores.
 
-### O que levantar (mínimo 5 trabalhos)
-Para **cada estudo encontrado** aderente à temática do grupo, registre de forma objetiva:
-* Problema e contexto: que problema o trabalho buscou resolver e em qual domínio/cenário foi aplicado.
-* Dados (dataset): origem, tamanho, período, variáveis/atributos, pré-processamentos relevantes (faltantes, balanceamento, normalização).
-* Abordagem/algoritmos: algoritmos utilizados e parâmetros principais (quando informados).
-* Métricas de avaliação: quais e por quê (ex.: Acurácia, F1, AUC, RMSE, MAE, etc.).
-* Resultados: principais números, comparações internas, limitações citadas e conclusões.
+Na literatura são descritos inúmeros artigos científicos sobre o tema. Para esse projeto destacamos quatro estudos de forma aplicada e um estudo sobre avaliação de métodos de balanceamento, problema recorrente para dados reais.
 
-* Texto-síntese crítico (2–4 parágrafos) respondendo:
-- O que os estudos concordam? Onde divergem?
-- Quais lacunas permanecem (dados, métricas, cenários, limitações técnicas/éticas)?
-- Como seu projeto se alinha aos estudos identificados?
+**DANIEL et al. (2024)** estudaram um dataset proveniente da Welsh Primary Care Electronic Health Records (EHRS) combinado com o Brecon Dataset, ambos sendo registros de crianças diagnosticadas com diabetes do tipo 1, totalizando 34.089.103 linhas de registro e 26 colunas. O propósito do trabalho foi investigar se um algoritmo de ML poderia prever o aparecimento da doença em uma criança e também o tempo previsto de diagnóstico. Para isso foi desenvolvido um superaprendiz (SuperLearner). Para a análise estatística foram construídos 34 algoritmos e usadas as técnicas de Univariate Correlation Screening e Random Forest Screening para selecionar as variáveis mais importantes. Para a avaliação da performance de cada algoritmo foi usada a técnica AUROC (Área sob a Curva ROC) para selecionar os melhores algoritmos para fazer parte do SuperLearner. Finalmente, para comparar o modelo final com aproximações, como por exemplo regressão linear logística, eles desenvolveram um próprio algoritmo de regressão logística.
 
-**Dica:** Prefira artigos dos últimos 5 anos ou referências clássicas indispensáveis.
+Já **MAO T (2026)** criou um modelo baseado no dataset do National Health and Nutrition Examination Survey (NHANES) integrado com características demográficas, indicadores clínicos e fatores de estilo de vida. Todos os arquivos do dataset continham 5.000 linhas depois de tratados e 9 parâmetros, com exceção do alvo. Para o pré-processamento, todas as variáveis contínuas foram processadas numericamente, sendo que valores nulos foram preenchidos com média, enquanto as não numéricas foram codificadas por tipo. Para a predição da diabetes foi construído um modelo Multi Layer Perceptron (MLP) e um conjunto de características de entrada de alta qualidade por meio de limpeza de características, padronização e análise de componentes principais (PCA), usando a saída do modelo para previsão de estratificação de risco. Para o treinamento, os dados foram padronizados com Z-score e posteriormente foram usadas as métricas de performance Exatidão, Precisão, Recall, F1 Score e AUC. Em geral, o estudo demonstra uma estratégia para a avaliação precoce do risco de diabetes, ao mesmo tempo que fornece informações sobre a aplicação de técnicas de inteligência artificial na pesquisa em saúde pública.
 
-### Ferramentas inteligentes permitidas
-Você pode utilizar: Perplexity, SciSpace, Elicit, Research Rabbit, Litmaps.
-Use-as para descoberta, organização e triagem de literatura. 
+**EDLITZ Y. e SEGAL E. (2022)** analisaram 44.709 dados com 798 parâmetros do UK Biobank referentes a participantes não diabéticos com idade entre 40 e 69 anos para prever o risco de diabetes tipo 2. Os dados foram analisados usando árvores de decisão com gradient boosting, análise de sobrevivência e regressão logística. Foram desenvolvidos dois modelos simplificados com formulário de scorecard (cartão de pontuação). Para o modelo não laboratorial foram definidos os parâmetros: sexo, idade, peso, altura, circunferência de cintura e quadril, relação cintura-quadril e IMC. Já o modelo laboratorial acrescenta quatro exames de sangue comuns (HDL, gama-glutamil transferase, hemoglobina glicada e triglicerídeos). Como resultado, o modelo não laboratorial atingiu uma área sob a curva ROC (AUC) de 0,81, enquanto o modelo laboratorial alcançou AUC de 0,87 — ambos superando os escores de risco tradicionalmente usados na literatura (FINDRISC e GDRS) — mantendo desempenho satisfatório (AUC de 0,75) na validação externa.
 
-**Atenção:** 
-* Sempre acesse a fonte original (PDF/artigo) antes de citar; verifique números e conclusões.
-* Registre DOI/URL oficial e dados bibliográficos completos.
-* Evite “alucinações” das ferramentas: desconfie de referências sem DOI ou que você não consiga localizar oficialmente.
-* Use as ferramentas inteligentes para mapear redes de citação (Research Rabbit), mapas de tópicos (Litmaps), filtrar por período e gerar resumos iniciais (Perplexity/SciSpace/Elicit).
-* Leia os trabalhos mais promissores e descarte estudos fora de escopo.
+**PALA & ABUSHAHLA (2024)** estudaram um dataset relacionado a diabetes, aplicando seis técnicas de pré-processamento para lidar com o desbalanceamento de classes. O propósito do trabalho foi investigar se técnicas de tratamento de dados poderiam melhorar a performance de classificação de diabetes em bases desbalanceadas. Para isso foram construídos dez algoritmos de classificação: Regressão Logística, Árvore de Decisão, Random Forest, Gradient Boosting, SVM, KNN, Naive Bayes, XGBoost, LightGBM e CatBoost. Para o tratamento dos dados foram usadas as técnicas de padronização, normalização, padronização combinada com validação cruzada K-Fold, e duas variações com a técnica de sobreamostragem SMOTE. Para a avaliação da performance de cada combinação de modelo e técnica de pré-processamento foram usadas as métricas de acurácia, precisão, recall e F1-score. Finalmente, para comparar os modelos entre si, o CatBoost se destacou como o de melhor desempenho, atingindo 95,18% de acurácia, 91,10% de precisão, 95,52% de recall e 93,26% de F1-score.
 
-> **Links Úteis**:
-> - [Google Scholar](https://scholar.google.com/)
-> - [IEEE Xplore](https://ieeexplore.ieee.org/Xplore/home.jsp)
-> - [Science Direct](https://www.sciencedirect.com/)
-> - [ACM Digital Library](https://dl.acm.org/)
+Por fim, **GOURISARIA M. et al. (2021)** estudaram dois datasets relacionados a diabetes, o primeiro do Hospital de Frankfurt, na Alemanha, e o segundo do repositório da Universidade da Califórnia, Irvine (UCI). O propósito do trabalho foi detectar diabetes mellitus através de técnicas de aprendizado de máquina, aprendizado profundo e redução de dimensionalidade dos dados. Para isso foram construídos os algoritmos de classificação Support Vector Machines, Naïve Bayes e Random Forest, aplicados para diferenciar pacientes diabéticos de não diabéticos. Para a análise estatística, o processo foi repetido em versões dos datasets com dimensionalidade reduzida, usando as técnicas de Linear Discriminant Analysis (LDA) e Principal Component Analysis (PCA). Para a avaliação da performance de cada modelo foi realizado ajuste de hiperparâmetros seguido de estudo comparativo entre os resultados. Finalmente, para comparar os modelos entre si, o K-Nearest Neighbours se destacou como o de melhor desempenho no dataset de Frankfurt, atingindo 98,2% de acurácia, enquanto o Random Forest se destacou no dataset da UCI, atingindo 99,2% de acurácia.
+
+Um resumo dos estudos está descrito na Tabela 1.
 
 # Descrição do _dataset_ selecionado
 
