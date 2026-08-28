@@ -6,20 +6,20 @@
 
 `SEMESTRE: 7º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O objetivo do trabalho é, a partir de um Dataset com dados clínicos reais de um grupo de pessoas, construir modelos utilizando técnicas de Ciências de Dados para prever o aparecimento da doença a partir da entrada de dados futuros.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+* Gregory Stevão Amilar Costa
+* João Alberto Raymundo Borges
+* João Pedro Reis Martins
+* Nícolas Cleiton Basilio Viana
+* Thiago Vinicius Costa Lara
+* Vitor Luz de Sales
 
 ## Orientador
 
-* Nome completo do professor 1
+* Neil Paiva Tizzo
 
 # Planejamento
 
