@@ -175,5 +175,19 @@ Nesta etapa, o grupo deverá produzir um vídeo de 5 a 8 minutos apresentando o 
 
 Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho utilizando o padrão ABNT.
 
-> **Links Úteis**:
-> - [Padrão ABNT PUC Minas](https://portal.pucminas.br/biblioteca/index_padrao.php?pagina=5886)
+CENTERS FOR DISEASE CONTROL AND PREVENTION (CDC). 2015 BRFSS Survey Data and Documentation. Atlanta: CDC, 2015. Disponível em: https://www.cdc.gov/brfss/annual_data/annual_2015.html. Acesso em: 28 ago. 2026. 
+
+TEBOUL, Alex. Diabetes Health Indicators Dataset. Kaggle, 2021. Disponível em: https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset. Acesso em: 28 ago. 2026. 
+
+BALAJI, K. Vivek; SUGUMAR, R. Harnessing the power of machine learning for diabetes risk assessment: A promising approach. In: 2023 International Conference on Data Science, Agents & Artificial Intelligence (ICDSAAI). IEEE, 2023. p. 1-6. 
+
+DANIEL, Rhian et al. Predicting type 1 diabetes in children using electronic health records in primary care in the UK: development and validation of a machine-learning algorithm. The Lancet Digital Health, v. 6, n. 6, p. e386-e395, 2024. 
+
+MAO, Tiancheng. Diabetes Risk Prediction Based on Clinical and Lifestyle Data. In: ITM Web of Conferences. EDP Sciences, 2026. p. 01015. 
+
+EDLITZ, Yochai; SEGAL, Eran. Prediction of type 2 diabetes mellitus onset using logistic regression-based scorecards. Elife, v. 11, p. e71862, 2022. 
+
+ABUSHAHLA, Khalid Hani; PALA, Muhammed Ali. Optimizing diabetes prediction: addressing data imbalance with machine learning algorithms. ADBA Computer Science, v. 1, n. 1, p. 26-35, 2024. 
+
+GOURISARIA, Mahendra Kumar et al. Data science appositeness in diabetes mellitus diagnosis for healthcare systems of developing nations. IET Communications, v. 16, n. 5, p. 532-547, 2022.
+
