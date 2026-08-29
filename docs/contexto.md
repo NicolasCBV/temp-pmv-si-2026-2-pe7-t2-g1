@@ -54,21 +54,12 @@ Indique:
 
 ## Público-Alvo
 
-Nesta seção, descreva quem poderá se beneficiar com a sua investigação, apresentando os diferentes perfis de pessoas ou grupos impactados.
+O projeto tem como público-alvo principal profissionais e pesquisadores que atuam na análise de fatores associados ao diabetes e na avaliação de estratégias de prevenção, com destaque para equipes de saúde pública, epidemiologia, atenção primária, gestão de programas de prevenção e Ciência de Dados aplicada à saúde. Nesse contexto, os modelos desenvolvidos podem ser utilizados para investigar quais combinações de indicadores de saúde, hábitos de vida e condições socioeconômicas apresentam maior capacidade de discriminar indivíduos sem diabetes, com pré-diabetes ou com diabetes na população representada pelo conjunto de dados.
 
-O objetivo aqui não é definir clientes específicos ou papéis exatos dentro da aplicação, mas sim compreender o perfil dos usuários e partes interessadas. Para isso, considere:
-* Conhecimentos prévios relacionados ao domínio do problema e ao uso de tecnologia;
-* Nível de familiaridade com recursos digitais e possíveis barreiras de uso;
-* Contexto profissional e hierárquico, quando aplicável (ex.: nível de decisão, responsabilidades, área de atuação);
-* Necessidades e expectativas que podem ser atendidas pelo projeto.
+Também integram o público de interesse analistas e gestores responsáveis pelo planejamento de ações de rastreamento e prevenção de doenças crônicas. Para esses usuários, a utilidade do projeto está na comparação objetiva de modelos de aprendizado de máquina e na identificação dos atributos mais relevantes para a classificação do estado de diabetes.
 
-**Dica:** Seja objetivo e baseie suas descrições em informações reais ou plausíveis para o contexto escolhido. Isso ajudará a manter o foco no desenvolvimento de soluções relevantes e aplicáveis.
+Adiante, a população adulta potencialmente beneficiada por estratégias de rastreamento constitui um público indireto. No entanto, cabe ressaltar que o resultado do projeto não deve ser interpretado como diagnóstico clínico autônomo. O conjunto de dados deriva de um inquérito populacional telefônico realizado nos Estados Unidos e contém, em grande parte, informações autorrelatadas. Por essa razão, os modelos produzidos são adequados para estudar classificação e estratificação de risco com base em indicadores observados, mas não permitem, por si só, afirmar que ocorrerá o aparecimento futuro da doença em um indivíduo específico.
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
 
 ## Estado da arte
 
@@ -136,13 +127,77 @@ Tabela 1: Resumo dos estudos sobre Data Science aplicado a Diabetes.
 
 # Descrição do _dataset_ selecionado
 
-Nesta seção, apresente uma visão clara e objetiva do dataset selecionado, incluindo:
-* Identificação e origem – Nome, link de acesso, fonte (instituição, repositório, API etc.) e licença de uso.
-* Visão geral – Total de registros e atributos, período coberto e breve contextualização.
-* Atributos – Tabela com nome, descrição, tipo, unidade de medida (se aplicável) e exemplos de valores.
-* Qualidade dos dados – Presença de valores faltantes, inconsistências, duplicatas ou outliers.
+## Identificação, origem e finalidade
 
-**Dica:** Seja objetivo, mas inclua detalhes suficientes para que outra pessoa possa entender e reutilizar o conjunto de dados sem buscar informações extras.
+O conjunto selecionado é o **Diabetes Health Indicators Dataset**, publicado por Alex Teboul no Kaggle em 2021. A base é uma versão tratada e consolidada dos dados do **Behavioral Risk Factor Surveillance System (BRFSS) de 2015**, sistema de vigilância mantido pelos *Centers for Disease Control and Prevention* (CDC). Teboul não realizou a coleta primária: sua contribuição consistiu na seleção, recodificação e organização de variáveis do BRFSS em arquivos voltados a tarefas de classificação relacionadas ao diabetes (TEBOUL, 2021).
+
+A versão tratada está disponível em <https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset>. A documentação e os arquivos da fonte primária do ciclo de 2015 estão disponíveis no portal do CDC em <https://www.cdc.gov/brfss/annual_data/annual_2015.html>.
+
+A fonte primária, o BRFSS, é um inquérito transversal de saúde realizado por telefone fixo e celular com adultos não institucionalizados de 18 anos ou mais. Sua finalidade original é produzir informações populacionais sobre comportamentos de risco à saúde, condições crônicas, acesso aos serviços de saúde e utilização de serviços preventivos. Portanto, a coleta original não foi criada especificamente para treinamento de modelos de aprendizado de máquina nem exclusivamente para estudo do diabetes. No ciclo de 2015, o conjunto agregado do CDC contém **441.456 registros e 330 variáveis** e abrange os 50 estados dos Estados Unidos, o Distrito de Columbia, Guam e Porto Rico (CDC, 2015; CDC, 2016a).
+
+A versão disponibilizada no Kaggle reduz essa base a **21 variáveis preditoras** relacionadas a condições de saúde, comportamento e características sociodemográficas, além da variável alvo. Cada registro representa um respondente do levantamento após o processo de seleção e tratamento realizado pelo autor. A unidade de observação, portanto, é uma pessoa participante do BRFSS, e não uma consulta, internação, exame laboratorial ou série temporal de um paciente.
+
+A página do Kaggle distribui a base em três arquivos CSV, todos derivados do mesmo ciclo de coleta:
+
+| Arquivo | Registros | Colunas | Variável alvo | Característica da distribuição |
+| --- | ---: | ---: | --- | --- |
+| `diabetes_012_health_indicators_BRFSS2015.csv` | 253.680 | 22 | `Diabetes_012` | Três classes e distribuição desbalanceada |
+| `diabetes_binary_health_indicators_BRFSS2015.csv` | 253.680 | 22 | `Diabetes_binary` | Duas classes e distribuição desbalanceada |
+| `diabetes_binary_5050split_health_indicators_BRFSS2015.csv` | 70.692 | 22 | `Diabetes_binary` | Duas classes, com divisão aproximada de 50% por classe |
+
+No arquivo multiclasse, `Diabetes_012` assume os valores **0** para ausência de diabetes ou diabetes apenas durante a gestação, **1** para pré-diabetes e **2** para diabetes. Nos arquivos binários, `Diabetes_binary` assume **0** para ausência de diabetes e **1** para pré-diabetes ou diabetes, conforme a documentação publicada pelo autor. Em todos os arquivos há 21 atributos de entrada e uma coluna alvo (TEBOUL, 2021).
+
+Os arquivos derivados são fornecidos em **CSV**, formato  de texto amplamente compatível com ferramentas de análise de dados. Embora os valores estejam armazenados numericamente, a maior parte das variáveis possui natureza binária, categórica ou ordinal. O BRFSS original, por sua vez, foi disponibilizado pelo CDC em formatos ASCII e SAS Transport; o arquivo SAS Transport de 2015 contém as 330 variáveis da base anual (CDC, 2015).
+
+Quanto às condições de uso, a página do **Diabetes Health Indicators Dataset** no Kaggle informa licença **CC0: Public Domain** e frequência esperada de atualização **“Never”**. A versão tratada deve, portanto, ser considerada uma fotografia fixa do ciclo de 2015. O BRFSS original continua sendo realizado anualmente pelo CDC, mas novas edições do levantamento não atualizam automaticamente os três arquivos publicados por Teboul.
+
+## Atributos
+
+A tabela a seguir descreve as variáveis presentes nos arquivos tratados. As codificações foram mantidas de acordo com a documentação do conjunto e com o codebook do BRFSS 2015. Variáveis binárias utilizam 0 e 1; variáveis ordinais representam faixas ou escalas, e não medidas contínuas em sua unidade original.
+
+| Atributo | Papel e tipo | Descrição | Unidade ou codificação |
+| --- | --- | --- | --- |
+| `Diabetes_012` | Alvo, categórico ordinal | Estado de diabetes no arquivo com três classes. | 0 = sem diabetes ou apenas gestacional; 1 = pré-diabetes; 2 = diabetes. |
+| `Diabetes_binary` | Alvo, binário | Estado de diabetes nos arquivos binários. | 0 = sem diabetes; 1 = pré-diabetes ou diabetes, conforme documentação do conjunto. |
+| `HighBP` | Preditor, binário | Indica histórico de pressão arterial elevada. | 0 = não; 1 = sim. |
+| `HighChol` | Preditor, binário | Indica colesterol elevado. | 0 = não; 1 = sim. |
+| `CholCheck` | Preditor, binário | Indica realização de exame de colesterol nos cinco anos anteriores. | 0 = não; 1 = sim. |
+| `BMI` | Preditor, numérico | Índice de Massa Corporal. | kg/m², representado numericamente no arquivo. |
+| `Smoker` | Preditor, binário | Indica se o participante fumou pelo menos 100 cigarros ao longo da vida. | 0 = não; 1 = sim. |
+| `Stroke` | Preditor, binário | Indica relato prévio de acidente vascular cerebral. | 0 = não; 1 = sim. |
+| `HeartDiseaseorAttack` | Preditor, binário | Indica relato de doença coronariana ou infarto do miocárdio. | 0 = não; 1 = sim. |
+| `PhysActivity` | Preditor, binário | Indica realização de atividade física nos 30 dias anteriores, desconsiderando atividade relacionada ao trabalho. | 0 = não; 1 = sim. |
+| `Fruits` | Preditor, binário | Indica consumo de fruta uma ou mais vezes ao dia. | 0 = não; 1 = sim. |
+| `Veggies` | Preditor, binário | Indica consumo de vegetais uma ou mais vezes ao dia. | 0 = não; 1 = sim. |
+| `HvyAlcoholConsump` | Preditor, binário | Identifica consumo elevado de álcool segundo o critério adotado no conjunto. | 0 = não; 1 = sim. |
+| `AnyHealthcare` | Preditor, binário | Indica existência de alguma cobertura de assistência à saúde, como seguro ou plano pré-pago. | 0 = não; 1 = sim. |
+| `NoDocbcCost` | Preditor, binário | Indica se, nos 12 meses anteriores, o participante precisou consultar um médico e não conseguiu por causa do custo. | 0 = não; 1 = sim. |
+| `GenHlth` | Preditor, ordinal | Autoavaliação do estado geral de saúde. | 1 = excelente; 2 = muito boa; 3 = boa; 4 = regular; 5 = ruim. |
+| `MentHlth` | Preditor, inteiro | Número de dias, nos 30 dias anteriores, em que a saúde mental foi considerada ruim. | 0 a 30 dias. |
+| `PhysHlth` | Preditor, inteiro | Número de dias, nos 30 dias anteriores, em que a saúde física foi considerada ruim. | 0 a 30 dias. |
+| `DiffWalk` | Preditor, binário | Indica dificuldade importante para caminhar ou subir escadas. | 0 = não; 1 = sim. |
+| `Sex` | Preditor, binário | Sexo registrado no levantamento e recodificado no conjunto tratado. | 0 = feminino; 1 = masculino. |
+| `Age` | Preditor, ordinal | Faixa etária em 13 categorias. | 1 = 18–24 anos; ...; 13 = 80 anos ou mais. |
+| `Education` | Preditor, ordinal | Escolaridade em seis categorias. | 1 = sem escolarização ou apenas jardim de infância; ...; 6 = graduação de quatro anos ou mais. |
+| `Income` | Preditor, ordinal | Faixa de renda domiciliar anual em oito categorias. | 1 = menos de US$ 10.000; ...; 8 = US$ 75.000 ou mais. |
+
+## Qualidade dos dados, limitações e restrições de uso
+
+A versão de Teboul é apresentada como uma base previamente limpa e consolidada, o que reduz a quantidade de variáveis e elimina parte da complexidade do arquivo anual do BRFSS. A redução de **441.456 registros e 330 variáveis** da fonte primária para **253.680 registros e 21 preditores** na principal versão tratada mostra, entretanto, que houve seleção de observações e atributos. Esse processo deve ser considerado na interpretação dos resultados: a amostra efetivamente utilizada pelo projeto é um subconjunto da pesquisa original e não preserva todas as informações necessárias para reconstruir o desenho amostral do BRFSS.
+
+A documentação do Kaggle denomina os três arquivos como conjuntos de dados limpos, mas não apresenta, na página descritiva, uma auditoria coluna a coluna de valores ausentes, duplicatas e valores extremos. Assim, não há indicação documental de valores faltantes remanescentes, porém a ausência efetiva de `NaN`, códigos inválidos e inconsistências deve ser confirmada programaticamente na análise exploratória da Etapa 2. Da mesma forma, a ocorrência de registros idênticos e a distribuição de valores extremos, sobretudo em `BMI`, devem ser quantificadas antes de qualquer decisão de remoção.
+
+O primeiro problema evidente é o **desbalanceamento das classes** nos arquivos de 253.680 registros, explicitamente informado pelo autor. Esse aspecto pode produzir modelos com boa acurácia global e desempenho insuficiente para as classes menos frequentes, sobretudo pré-diabetes. Por essa razão, a avaliação não deve se limitar à acurácia; métricas como precisão, revocação (*recall*), F1-score, matriz de confusão e medidas baseadas em ROC ou precisão-revocação devem ser consideradas conforme a estratégia de modelagem. O arquivo com 70.692 registros fornece uma alternativa balanceada, porém altera artificialmente a prevalência observada e, por isso, não deve ser tratado como representação da prevalência populacional de diabetes.
+
+Outro limite decorre da própria natureza do BRFSS. Parte relevante das informações é **autorrelatada** em entrevista telefônica, incluindo diagnóstico informado pelo participante, hábitos, estado de saúde e acesso a serviços. Assim, a base está sujeita a viés de memória, erro de classificação, não resposta e diferenças de interpretação das perguntas. O levantamento busca representar adultos não institucionalizados alcançáveis pelos métodos de amostragem empregados; embora o CDC utilize ponderação por *raking* para reduzir distorções amostrais, a versão tratada no Kaggle não contém todas as variáveis de ponderação e desenho amostral necessárias para reproduzir estimativas populacionais oficiais do BRFSS (CDC, 2015; CDC, 2016a).
+
+Há ainda uma **restrição temporal e geográfica**. Os dados correspondem ao ciclo de 2015 e refletem a população adulta dos Estados Unidos e territórios incluídos naquele levantamento. Relações entre renda, acesso à saúde, hábitos e diagnóstico podem variar ao longo do tempo e entre países. Consequentemente, o desempenho obtido nessa base não pode ser assumido como válido para a população brasileira ou para dados atuais sem validação externa em amostra compatível com o contexto de aplicação.
+
+O conjunto tratado também não preserva identificador individual, data da entrevista ou localização do respondente entre os 21 preditores. Isso limita análises espaciais, temporais e de acompanhamento. Caso a análise exploratória identifique linhas integralmente iguais, elas não devem ser removidas automaticamente como duplicatas indevidas: dois participantes distintos podem apresentar exatamente a mesma combinação de respostas depois da discretização das variáveis. A inexistência de um identificador no arquivo tratado impede confirmar se registros idênticos representam repetição do mesmo participante.
+
+Valores extremos, especialmente em `BMI`, devem ser examinados na análise exploratória, mas a classificação como *outlier* exige critério clínico e estatístico. Para as variáveis ordinais (`Age`, `Education`, `Income` e `GenHlth`), os números representam categorias ordenadas; tratá-los como distâncias quantitativas equivalentes sem justificativa pode introduzir pressupostos inadequados no modelo.
+
+Por fim, o objetivo do projeto deve considerar que o conjunto é **transversal**, isto é, os preditores e o estado de diabetes são observados no mesmo levantamento. A base permite treinar modelos para classificar o estado de diabetes ou estimar risco associado aos indicadores disponíveis, mas não registra a evolução de uma mesma pessoa ao longo do tempo. Portanto, ela não sustenta diretamente uma tarefa de previsão temporal do “aparecimento futuro” da doença. Para esse tipo de conclusão seria necessária uma base longitudinal com indivíduos inicialmente sem diabetes e acompanhamento posterior de novos diagnósticos. No escopo atual, a formulação metodologicamente compatível é a classificação ou estratificação do risco de diabetes a partir dos indicadores de saúde disponíveis.
 
 # Canvas analítico
 
