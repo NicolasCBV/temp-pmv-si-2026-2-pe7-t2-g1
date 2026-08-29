@@ -36,20 +36,17 @@ Desenvolver e comparar modelos de aprendizado supervisionado para estimar a prob
 
 ## Justificativa
 
-Nesta seção, apresente a importância e a motivação para trabalhar com o conjunto de dados escolhido. Explique por que esse dataset é relevante e como ele se conecta ao problema identificado anteriormente.
+## Justificativa
 
-Indique:
-* Razões para a escolha dos objetivos específicos – Justifique por que decidiu aprofundar sua investigação nessas metas, relacionando-as ao potencial de solução ou melhoria para o problema.
-* Relevância do estudo do problema – Mostre a importância de compreender e tratar a questão apresentada, tanto no contexto acadêmico quanto no profissional.
-* Impacto social, econômico ou ambiental – Descreva como o problema afeta a sociedade ou um setor específico, buscando sempre quantificar o impacto por meio de dados reais.
+A escolha do diabetes mellitus como objeto deste estudo é motivada pela relevância da doença para a saúde pública e pelo desafio de identificar indivíduos que apresentam maior probabilidade de possuir a condição. Segundo o *Centers for Disease Control and Prevention* (CDC), em 2023 aproximadamente **40,1 milhões de pessoas nos Estados Unidos tinham diabetes**, sendo que **11 milhões de adultos apresentavam a doença sem diagnóstico**, correspondendo a 27,6% dos adultos com diabetes. Além disso, estima-se que **115,2 milhões de adultos apresentem pré-diabetes**. Esses números evidenciam a importância de estratégias capazes de apoiar a identificação e priorização de pessoas para ações de rastreamento e prevenção (CDC, 2026).
 
-**Importante:**
-* Apresente números, estatísticas e informações concretas, citando as fontes (relatórios, artigos científicos, portais oficiais etc.).
-* Mantenha a objetividade e a clareza, evitando argumentos genéricos.
-* Construa um texto coeso que conecte o problema, os objetivos e a relevância do trabalho.
+Nesse contexto, o **Diabetes Health Indicators Dataset** é relevante por reunir **253.680 registros e 21 indicadores** relacionados à saúde, comportamento e condições socioeconômicas, como IMC, pressão arterial, colesterol, atividade física, tabagismo, idade, escolaridade e renda. A diversidade dessas variáveis permite investigar o problema considerando a combinação de diferentes fatores, em vez da análise isolada de características individuais. Os objetivos específicos foram definidos para garantir uma investigação estruturada, abrangendo a caracterização e análise exploratória dos dados, a construção de um processo de preparação reprodutível, a comparação de modelos e métricas de desempenho e a avaliação de possíveis diferenças de desempenho entre grupos socioeconômicos e demográficos.
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+A realização deste estudo também possui relevância **acadêmica e profissional** por aplicar técnicas de **Ciência de Dados e aprendizado de máquina** a um problema concreto de saúde pública. A comparação de diferentes modelos permite avaliar quais abordagens apresentam maior capacidade de classificação e quais métricas são mais adequadas diante do desbalanceamento das classes. A análise de equidade amplia essa avaliação ao verificar se o desempenho obtido é consistente entre diferentes grupos, contribuindo para uma utilização mais responsável de modelos preditivos em contextos de saúde.
+
+O problema apresenta ainda impacto econômico significativo. Nos Estados Unidos, o custo estimado do diabetes diagnosticado foi de **US$ 412,9 bilhões em 2022**, sendo US$ 306,6 bilhões em custos médicos diretos e US$ 106,3 bilhões em custos indiretos. As despesas médicas de pessoas com diabetes foram, em média, **2,6 vezes maiores** do que as esperadas para pessoas sem a doença (AMERICAN DIABETES ASSOCIATION, 2023).
+
+Portanto, a escolha do dataset e dos objetivos propostos está diretamente relacionada ao problema identificado: compreender se a combinação de indicadores de saúde, comportamento e condições socioeconômicas pode melhorar a identificação de indivíduos associados a diferentes estados de diabetes. O projeto não pretende substituir diagnóstico ou avaliação médica, mas avaliar experimentalmente o potencial dos modelos de aprendizado de máquina como instrumento de apoio à **priorização de rastreamento**, considerando também suas limitações, desempenho e possíveis diferenças entre grupos populacionais.
 
 ## Público-Alvo
 
