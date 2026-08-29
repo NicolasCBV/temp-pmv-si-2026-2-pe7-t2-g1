@@ -77,9 +77,8 @@ Já **MAO T (2026)** criou um modelo baseado no dataset do National Health and N
 
 Por fim, **GOURISARIA M. et al. (2021)** estudaram dois datasets relacionados a diabetes, o primeiro do Hospital de Frankfurt, na Alemanha, e o segundo do repositório da Universidade da Califórnia, Irvine (UCI). O propósito do trabalho foi detectar diabetes mellitus através de técnicas de aprendizado de máquina, aprendizado profundo e redução de dimensionalidade dos dados. Para isso foram construídos os algoritmos de classificação Support Vector Machines, Naïve Bayes e Random Forest, aplicados para diferenciar pacientes diabéticos de não diabéticos. Para a análise estatística, o processo foi repetido em versões dos datasets com dimensionalidade reduzida, usando as técnicas de Linear Discriminant Analysis (LDA) e Principal Component Analysis (PCA). Para a avaliação da performance de cada modelo foi realizado ajuste de hiperparâmetros seguido de estudo comparativo entre os resultados. Finalmente, para comparar os modelos entre si, o K-Nearest Neighbours se destacou como o de melhor desempenho no dataset de Frankfurt, atingindo 98,2% de acurácia, enquanto o Random Forest se destacou no dataset da UCI, atingindo 99,2% de acurácia.
 
-Um resumo dos estudos está descrito na Tabela 1.
+Um resumo dos estudos está descrito na tabela abaixo:
 
-Tabela 1: Resumo dos estudos sobre Data Science aplicado a Diabetes.
 <table>
 <tr>
 <th>Autores</th>
