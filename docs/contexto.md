@@ -143,7 +143,6 @@ Tabela 1: Resumo dos estudos sobre Data Science aplicado a Diabetes.
 </tr>
 </table>
 
-*Tabela 1: Resumo dos estudos sobre Data Science aplicado a Diabetes.*
 
 
 # Descrição do _dataset_ selecionado
