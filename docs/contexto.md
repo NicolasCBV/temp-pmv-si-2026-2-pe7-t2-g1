@@ -10,11 +10,6 @@ Na prática, muita gente só é identificada quando a doença já está instalad
 
 Este projeto é acadêmico e será desenvolvido na disciplina de Pesquisa e Experimentação em Sistemas de Informação, da PUC Minas. Não há empresa parceira. A base escolhida é o Diabetes Health Indicators Dataset (TEBOUL, 2021), montado a partir da pesquisa BRFSS 2015 do CDC (CDC, 2015). São dados clínicos reais de adultos, o que permite treinar e comparar modelos de ciência de dados para prever a presença ou o aparecimento da doença em registros novos.
 
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
-
 ## Questão de pesquisa
 
 Quais modelos de aprendizado de máquina, treinados com os indicadores clínicos e de estilo de vida do Diabetes Health Indicators Dataset (BRFSS 2015), preveem melhor o risco ou a presença de diabetes em registros que não foram usados no treino?
