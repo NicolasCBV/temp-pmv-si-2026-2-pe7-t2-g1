@@ -13,7 +13,7 @@ Texto descritivo introdutório apresentando a visão geral do projeto a ser dese
 
 ## Questão de pesquisa
 
-[questão de pesquisa](docs/questao-de-pesquisa.md)
+[questao-de-pesquisa](docs/questao-de-pesquisa.md)
 
 ## Objetivos preliminares
 
