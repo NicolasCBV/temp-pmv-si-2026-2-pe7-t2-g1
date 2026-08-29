@@ -4,7 +4,7 @@ Texto descritivo introdutório apresentando a visão geral do projeto a ser dese
 
 ## Problema
 
-[problema](docs/problema.md)
+[problema](problema.md)
 
 > **Links Úteis**:
 > - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
@@ -13,7 +13,7 @@ Texto descritivo introdutório apresentando a visão geral do projeto a ser dese
 
 ## Questão de pesquisa
 
-[questao-de-pesquisa](docs/questao-de-pesquisa.md)
+[questao-de-pesquisa](questao-de-pesquisa.md)
 
 ## Objetivos preliminares
 
