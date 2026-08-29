@@ -192,7 +192,7 @@ Por fim, o objetivo do projeto deve considerar que o conjunto é **transversal**
 
 # Canvas analítico
 
-<img width="2000" height="1414" alt="CanvasAnalítico (imagem)" src="https://github.com/user-attachments/assets/356c7a9f-c15c-447a-bc75-b38640c35c2c" />
+![Canvas Analítico](../docs/img/CanvasAnalítico(imagem).png)
 
 
 # Vídeo de apresentação da Etapa 01
