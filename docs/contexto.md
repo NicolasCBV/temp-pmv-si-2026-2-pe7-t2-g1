@@ -1,6 +1,10 @@
-# Introdução
+# Introdução  
 
-Texto descritivo introdutório apresentando a visão geral do projeto a ser desenvolvido considerando o contexto em que ele se insere, os objetivos gerais, a justificativa e o público-alvo do projeto.
+O diabetes mellitus é uma condição crônica de instalação silenciosa, cujo diagnóstico frequentemente ocorre apenas quando já existem complicações estabelecidas. Uma parcela expressiva das pessoas que convivem com a doença desconhece o próprio diagnóstico e permanece sem acompanhamento. O rastreamento universal por exame laboratorial resolveria o problema, mas é inviável por custo e capacidade instalada. A alternativa praticada é a priorização: identificar quem tem maior probabilidade de apresentar a condição e direcionar a esses o recurso escasso do exame. Essa priorização costuma usar critérios fixos e isolados, como idade ou índice de massa corporal, que são transparentes mas pouco sensíveis a combinações de fatores e incapazes de ordenar indivíduos por grau de risco. 
+
+É nesse ponto que o aprendizado de máquina se torna pertinente. A estatística descritiva responde a perguntas sobre o que já ocorreu na amostra, de forma agregada e retrospectiva. Modelos supervisionados produzem estimativa individual aplicável a novos casos, combinando mais de vinte indicadores com interações não lineares em um escore ordenável e acionável. 
+
+Este trabalho investiga essa possibilidade com o Diabetes Health Indicators Dataset, derivado do Behavioral Risk Factor Surveillance System (BRFSS), inquérito telefônico do CDC. A versão utilizada reúne 253.680 respostas descritas por 21 indicadores de saúde, comportamento e condição socioeconômica. O objetivo é construir e comparar modelos de classificação que estimem a probabilidade individual da condição a partir de informações de baixo custo de coleta, avaliando desempenho preditivo e limitações metodológicas e éticas. 
 
 ## Problema
 
@@ -16,24 +20,19 @@ Quais modelos de aprendizado de máquina, treinados com os indicadores clínicos
 
 A resposta vem da comparação entre os modelos ao final da experimentação, com métricas como acurácia, precisão, recall, F1-score e AUC.
 
-## Objetivos preliminares
+## Objetivos preliminares. 
 
-Nesta seção, você deve apresentar os objetivos preliminares do trabalho, deixando claro que o objetivo geral é experimentar modelos de aprendizado de máquina adequados para solucionar o problema descrito anteriormente.
+### Objetivo geral
 
-Além do objetivo geral, é importante definir pelo menos dois objetivos específicos, que direcionem a investigação de acordo com o foco que o grupo pretende adotar. Esses objetivos específicos podem envolver: 
-* Explorar um determinado tipo de modelagem ou técnica de aprendizado de máquina;
-* Comparar diferentes abordagens para resolver o mesmo problema;
-* Aplicar o modelo em um cenário real ou simulado;
-* Otimizar parâmetros para melhorar métricas específicas de desempenho.
+Desenvolver e comparar modelos de aprendizado supervisionado para estimar a probabilidade de diabetes ou pré-diabetes em adultos, a partir dos indicadores autorrelatados do BRFSS 2015, avaliando seu potencial como instrumento de priorização de rastreamento e discutindo suas limitações. 
 
-Exemplo:
-Objetivo específico 1: Predizer a tendência de alta, estabilidade ou queda de uma determinada ação em uma janela de tempo definida.
-Objetivo específico 2: Estimar o valor exato da ação ao final do período analisado.
+### Objetivos específicos 
 
-**Importante:** À medida que a pesquisa/experimentação avança, os objetivos podem ser ajustados ou refinados. Mantenha essa seção atualizada no repositório para refletir o andamento e as novas decisões do projeto.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+1. Caracterizar o conjunto quanto a dimensões, tipos, distribuição do rótulo, duplicações e valores atípicos, definindo a unidade de análise.
+2. Realizar análise exploratória das 21 variáveis, identificando distribuições e associações com o rótulo.
+3. Construir pipeline de preparação reprodutível, com toda transformação ajustada apenas após a separação treino/teste.
+4. Avaliar equidade, comparando taxas de erro entre estratos de sexo, renda e escolaridade.
+5. Implantar solução que retorne probabilidade, faixa de prioridade e fatores contribuintes, com aviso explícito de caráter não diagnóstico
 
 ## Justificativa
 
