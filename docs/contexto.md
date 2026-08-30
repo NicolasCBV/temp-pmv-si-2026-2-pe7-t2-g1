@@ -36,8 +36,6 @@ Desenvolver e comparar modelos de aprendizado supervisionado para estimar a prob
 
 ## Justificativa
 
-## Justificativa
-
 A escolha do diabetes mellitus como objeto deste estudo é motivada pela relevância da doença para a saúde pública e pelo desafio de identificar indivíduos que apresentam maior probabilidade de possuir a condição. Segundo o *Centers for Disease Control and Prevention* (CDC), em 2023 aproximadamente **40,1 milhões de pessoas nos Estados Unidos tinham diabetes**, sendo que **11 milhões de adultos apresentavam a doença sem diagnóstico**, correspondendo a 27,6% dos adultos com diabetes. Além disso, estima-se que **115,2 milhões de adultos apresentem pré-diabetes**. Esses números evidenciam a importância de estratégias capazes de apoiar a identificação e priorização de pessoas para ações de rastreamento e prevenção (CDC, 2026).
 
 Nesse contexto, o **Diabetes Health Indicators Dataset** é relevante por reunir **253.680 registros e 21 indicadores** relacionados à saúde, comportamento e condições socioeconômicas, como IMC, pressão arterial, colesterol, atividade física, tabagismo, idade, escolaridade e renda. A diversidade dessas variáveis permite investigar o problema considerando a combinação de diferentes fatores, em vez da análise isolada de características individuais. Os objetivos específicos foram definidos para garantir uma investigação estruturada, abrangendo a caracterização e análise exploratória dos dados, a construção de um processo de preparação reprodutível, a comparação de modelos e métricas de desempenho e a avaliação de possíveis diferenças de desempenho entre grupos socioeconômicos e demográficos.
