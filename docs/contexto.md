@@ -195,7 +195,9 @@ Por fim, o objetivo do projeto deve considerar que o conjunto é **transversal**
 
 # Vídeo de apresentação da Etapa 01
 
-Nesta etapa, o grupo deverá produzir um vídeo de 5 a 8 minutos apresentando o trabalho realizado, no qual cada integrante deve dizer seu nome e apresentar uma parte do conteúdo desenvolvido, garantindo que todos participem ativamente da gravação. A ausência de participação de qualquer membro resultará em penalização na nota final desta etapa. Recomenda-se que o grupo elabore previamente um roteiro para organizar a ordem das falas, distribuir o tempo de forma equilibrada e assegurar que todos os tópicos relevantes sejam apresentados de maneira clara e objetiva.
+[Link da Apresentação](https://drive.google.com/file/d/1QeQFgR2ex3bpgjYRaZB6nCbx3VIOTqIv/view?usp=sharing)
+
+
 
 # Referências
 
